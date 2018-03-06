@@ -4,7 +4,6 @@ $password = null;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') 
 {
-
     if(!empty($_POST["username"]) && !empty($_POST["password"])) 
     {
         $username = $_POST["username"];
@@ -15,9 +14,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             session_start();
             $_SESSION["authenticated"] = 'true';
             header('Location: index.php');
+            window.open("index.php","_self");
         }
-        else {
-            header('Location: connexion.php');
+        else 
+        {
+            alert("Le mot de passe ou le nom d'utilisateur semble incorrecte")
         }
         
     } 
@@ -48,8 +49,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         <h3>Identifiant</h3>
         <input id="username" name="username" type="text" placeholder="id" required />
         <h3>Mot de passe</h3>
-        <input id="password" name="password"type="password" placeholder="mdp" required /> 
-        <br />
+        <input id="password" name="password" type="password" placeholder="mdp" required /> 
+        <br /><br />
         <input type="submit" value="Connecter" /> 
         </form>
     </body>

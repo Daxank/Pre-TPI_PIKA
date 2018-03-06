@@ -13,9 +13,7 @@ require_once('connexion.php');
         
         <script type="text/javascript">
         var adminclick = 0;
-        var miliseconds = 0;
-        var myTimer;
-
+            
         function add()
             {
                 adminclick++;
@@ -40,8 +38,8 @@ require_once('connexion.php');
 
     </head>
     <body>
-        <div class="containerlogo">
-        <img src="imgs/logo.png" onclick="add()">
-        </div>
+        <span class="containerlogo">
+        <img class="logo" src="imgs/logo.png" onclick="add()">
+        </span>
     </body>
 </html>
