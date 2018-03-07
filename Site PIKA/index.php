@@ -9,6 +9,7 @@ require_once('connexion.php');
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>PIKA</title>
         <meta name="PIKA" content="PIKA website">
+        <link rel="shortcut icon" href="imgs/pika.png">
         <link rel="stylesheet" href="main.css">
         
         <script type="text/javascript">

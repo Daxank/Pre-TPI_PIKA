@@ -36,6 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>PIKA</title>
         <meta name="PIKA" content="PIKA website">
+        <link rel="shortcut icon" href="imgs/pika.png">
         <link rel="stylesheet" href="main.css">
         
         <script type="text/javascript">
@@ -44,14 +45,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
     </head>
     <body>
-        <form id="login" method="post">
-        <h1>Connexion</h1>
-        <h3>Identifiant</h3>
-        <input id="username" name="username" type="text" placeholder="id" required />
-        <h3>Mot de passe</h3>
-        <input id="password" name="password" type="password" placeholder="mdp" required /> 
-        <br /><br />
-        <input type="submit" value="Connecter" /> 
-        </form>
+        <div id="tableContainer-1">
+            <div id="tableContainer-2">
+                <table id="myTable">
+                        <form id="login" method="post">
+                            <tr>
+                                <td>
+                                    <h1>Connexion</h1>
+                                    <h3>Identifiant</h3>
+                                    <input id="username" name="username" size=75% type="text" placeholder="id" required />
+                                    <h3>Mot de passe</h3>
+                                    <input id="password" name="password" size=75% type="password" placeholder="mdp" required /> 
+                                    <br /><br />
+                                    <input type="submit" value="Connecter" id="buttonright" /> 
+                                </td>    
+                            </tr>
+                        </form>
+                </table>
+            </div>
+        </div>
     </body>
 </html>
