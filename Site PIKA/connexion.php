@@ -1,35 +1,22 @@
-<?php
-$username = null;
-$password = null;
+<?php defined('DS') OR die('No direct access allowed.');
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') 
-{
-    if(!empty($_POST["username"]) && !empty($_POST["password"])) 
-    {
-        $username = $_POST["username"];
-        $password = $_POST["password"];
-        
-        if($username == 'admin' && $password == 'password') 
-        {
-            session_start();
-            $_SESSION["authenticated"] = 'true';
-            header('Location: index.php');
-            window.open("index.php","_self");
-        }
-        else 
-        {
-            alert("Le mot de passe ou le nom d'utilisateur semble incorrecte")
-        }
-        
-    } 
-    else 
-    {
-        header('Location: connexion.php');
+$users = array(
+ "admin" => "password"
+);
+
+if(isset($_POST['username'])) {
+    if($users[$_POST['username']] !== NULL && $users[$_POST['username']] == $_POST['password']) {
+  $_SESSION['username'] = $_POST['username'];
+  header('Location:  ' . $_SERVER['PHP_SELF']);
+    }else {
+        //invalid login
+  echo "<p>error logging in</p>";
     }
-} 
+}
+exit; 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     
     <head>
         <meta charset="utf-8">
@@ -45,6 +32,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
     </head>
     <body>
+         <?php if($_SESSION['username']): ?>
+            <p>You are logged in as <?=$_SESSION['username']?></p>
+            <p><a href="?logout=1">Logout</a></p>
+        <?php endif; ?>
         <div id="tableContainer-1">
             <div id="tableContainer-2">
                 <table id="myTable">
@@ -57,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                                     <h3>Mot de passe</h3>
                                     <input id="password" name="password" size=75% type="password" placeholder="mdp" required /> 
                                     <br /><br />
-                                    <input type="submit" value="Connecter" id="buttonright" /> 
+                                    <input type="submit" name="submit" value="Connecter" id="buttonright" /> 
                                 </td>    
                             </tr>
                         </form>
