@@ -13,5 +13,8 @@
         <span class="containerlogo">
             <img class="logo" src="imgs/logo.png">
         </span>
+        <form action="homepage.php">
+            <input type="submit" class="buttonright" value="Déconnecter" />
+        </form>
     </body>
 </html>

@@ -1,18 +1,16 @@
 <?php
-if (isset($_POST['username']) && isset($_POST['password'] && $_SERVER['REQUEST_METHOD'] == 'POST'))
+if(isset($_POST['username']) && isset($_POST['password']))
 {
     session_start();
-
     $username=$_POST['username'];
     $password=$_POST['password'];
-
     if($username=='admin' && $password=='password') 
     {
-        window.open('administration.html','_self');
+        echo "<script>window.open('administration.php','_self')</script>";
     }
     else
     {
-        alert('Nom de compte ou mot de passe incorrecte'); 
+        echo "<script>alert(\"Le nom de compte ou mot de passe semble incorrecte\")</script>"; 
         $username=null;
         $password=null;
     }
@@ -51,4 +49,3 @@ if (isset($_POST['username']) && isset($_POST['password'] && $_SERVER['REQUEST_M
         </div>
     </body>
 </html>
- //test changement
