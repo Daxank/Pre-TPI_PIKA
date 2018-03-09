@@ -1,13 +1,18 @@
 <?php
-if(!empty($_POST["username"]) && !empty($_POST["password"])) 
+if (isset($_POST['username']) && isset($_POST['password'] && $_SERVER['REQUEST_METHOD'] == 'POST'))
 {
-    if($username=="admin" && $password=="password") 
+    session_start();
+
+    $username=$_POST['username'];
+    $password=$_POST['password'];
+
+    if($username=='admin' && $password=='password') 
     {
-        window.open("administration.html","_self");
+        window.open('administration.html','_self');
     }
     else
     {
-        alert("Nom de compte ou mot de passe incorrecte"); 
+        alert('Nom de compte ou mot de passe incorrecte'); 
         $username=null;
         $password=null;
     }
@@ -21,7 +26,7 @@ if(!empty($_POST["username"]) && !empty($_POST["password"]))
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>PIKA</title>
         <meta name="PIKA" content="PIKA website">
-        <link rel="shortcut icon" href="imgs/pika.png">
+        <link rel="shortcut icon" href="imgs/logo.png">
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
@@ -37,7 +42,7 @@ if(!empty($_POST["username"]) && !empty($_POST["password"]))
                                 <h3>Mot de passe</h3>
                                 <input id="password" name="password" size=75% type="password" placeholder="mdp" required /> 
                                 <br /><br />
-                                <input type="submit" class="buttonright" value="Connecter" id="submit" /> 
+                                <input type="submit" class="buttonright" value="Connecter" id="submit"/> 
                             </form>
                         </td>    
                     </tr>
@@ -46,3 +51,4 @@ if(!empty($_POST["username"]) && !empty($_POST["password"]))
         </div>
     </body>
 </html>
+ //test changement
