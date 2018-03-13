@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['username']) && isset($_POST['password']))
+if(!empty($_POST['username']) && !empty($_POST['password']))
 {
     session_start();
     $username=$_POST['username'];

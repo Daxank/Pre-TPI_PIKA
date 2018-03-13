@@ -39,5 +39,49 @@
         <span class="containerlogo">
             <img class="logo" src="imgs/logo.png" onclick="add()">
         </span>
+        <table id="storetable">
+            <tr>
+                <td>
+                    <table id="leftmenu">
+                        <tr>
+                            <td class="product">
+                                placeholder
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                placeholder
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                placeholder
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table id="rightmenu">
+                        <tr>
+                            <td>
+                                <h3>Panier</h3>
+                                <table id="basket">
+                                    <tr>
+                                        <td>
+                                            placeholder
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr class="rightmenbot">
+                            <td>
+                                <input type="submit" value="Commander" class="buttonright" id="buttonbig">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
     </body>
 </html>
