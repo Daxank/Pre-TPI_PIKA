@@ -1,20 +1,6 @@
 <?php
-if(!empty($_POST['username']) && !empty($_POST['password']))
-{
-    session_start();
-    $username=$_POST['username'];
-    $password=$_POST['password'];
-    if($username=='admin' && $password=='password') 
-    {
-        echo "<script>window.open('administration.php','_self')</script>";
-    }
-    else
-    {
-        echo "<script>alert(\"Le nom de compte ou mot de passe semble incorrecte\")</script>"; 
-        $username=null;
-        $password=null;
-    }
-}
+require_once('fonctions.php');
+admin();
 ?>
 <!DOCTYPE html>
 <html lang="en">

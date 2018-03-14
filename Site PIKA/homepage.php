@@ -1,3 +1,7 @@
+<?php
+require_once('fonctions.php');
+ConnectDB();
+?>
 <!DOCTYPE html>
 <html lang="en">
 

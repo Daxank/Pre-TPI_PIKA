@@ -1,3 +1,11 @@
+<?php
+require_once('fonctions.php');
+connected();
+if(!empty($_POST['disconnect']))
+{
+    echo "<script>window.open('homepage.php','_self')</script>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,8 +21,8 @@
         <span class="containerlogo">
             <img class="logo" src="imgs/logo.png">
         </span>
-        <form action="homepage.php">
-            <input type="submit" class="buttonright" value="Déconnecter" />
+        <form method="POST">
+            <input type="submit" class="buttonright" name="disconnect" value="Déconnecter" />
         </form>
     </body>
 </html>
