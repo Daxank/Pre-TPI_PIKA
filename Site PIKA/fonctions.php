@@ -40,17 +40,15 @@ function admin()
 }
 function connected()
 {
-    if(isset($username) && isset($password))
+    if($username=='admin' && $password=='password') 
     {
-        if($username=='admin' && $password=='password') 
-        {
-        }
-        else
-        {
-            $username=null;
-            $password=null;
-            echo "<script>window.open('homepage.php','_self')</script>";
-        }
+    }
+    else
+    {
+        $username=null;
+        $password=null;
+        echo "<script>window.open('homepage.php','_self')</script>";
     }
 }
+
 ?>

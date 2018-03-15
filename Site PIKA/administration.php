@@ -1,5 +1,6 @@
 <?php
 require_once('fonctions.php');
+ConnectDB();
 connected();
 if(!empty($_POST['disconnect']))
 {

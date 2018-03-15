@@ -12,7 +12,8 @@ ConnectDB();
         <meta name="PIKA" content="PIKA website">
         <link rel="shortcut icon" href="imgs/logo.png">
         <link rel="stylesheet" href="main.css">
-
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <script src="/js/bootstrap.js"></script>
         <script type="text/javascript">
             var adminclick = 0;
 
@@ -46,22 +47,56 @@ ConnectDB();
         <table id="storetable">
             <tr>
                 <td>
-                    <table id="leftmenu">
-                        <tr>
-                            <td class="product">
-                                placeholder
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                placeholder
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                placeholder
-                            </td>
-                        </tr>
+                    <table>
+                        <tbody id="leftmenu">
+                            <tr>
+                                <td class="product">
+                                    placeholder
+                                </td>
+                                <td class="product">
+                                    placeholder
+                                </td>
+                                <td class="product">
+                                    placeholder
+                                </td>
+                                <td class="product">
+                                    placeholder
+                                </td>
+                                <td class="product">
+                                    placeholder
+                                </td>
+                                <td class="product">
+                                    placeholder
+                                </td>
+                                <td class="product">
+                                    placeholder
+                                </td>
+                                <td class="product">
+                                    placeholder
+                                </td>
+                                <td class="product">
+                                    placeholder
+                                </td>
+                                <td class="product">
+                                    placeholder
+                                </td>
+                                <td class="product">
+                                    placeholder
+                                </td>
+                                <td class="product">
+                                    placeholder
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="product">
+                                    placeholder
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="product">
+                                    placeholder
+                                </td>
+                            </tr>
                     </table>
                 </td>
                 <td>
