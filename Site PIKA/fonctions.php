@@ -3,7 +3,7 @@ function ConnectDB()
 {
     global $dbh;
     $hostname = 'localhost';
-    $dbname = 'db_PIKA';
+    $dbname = 'db_pika';
     $username = 'root';
     $password = '';
 

@@ -42,49 +42,39 @@ html, body
 }
 #storetable 
 {
-    width: 100%;
+    width: 99%;
     height: 90%;
-    margin: auto;
     border: 2px solid black;
 }
 #leftmenu
 {
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
     white-space: nowrap;
-    float: left;
 }
 #rightmenu
 {
-    width: 25%;
-    height: 100%;
     background-color:#E6E6E6;
     border: 2px solid black;
-    float: right;
 }
 #basket
 {
     width: 100%;
     height: 100%;
-    overflow-x: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
     white-space: nowrap;
     border: 2px solid black;
-}
-.rightmenbot
-{
-    height:20%;
-    vertical-align: bottom;
 }
 #buttonbig
 {
     width: 40%;
     height: 30%;
 }
-.product
+#product
 {
     background-color: cornflowerblue;
     border-radius: 25px;
-    width: 75px;
-    height: 75px;
+    width: 250px;
+    height: 250px;
 }

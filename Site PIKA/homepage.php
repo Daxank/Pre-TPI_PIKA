@@ -44,9 +44,37 @@ ConnectDB();
         <span class="containerlogo">
             <img class="logo" src="imgs/logo.png" onclick="add()">
         </span>
-        <div class="container container-fluid">
-            <div class="alert alert-danger col-md-8">test</div>
-            <div class="alert alert-danger col-md-4">test2</div>
+        <div class="container-border container-fluid" id="storetable">
+            <div class="row">
+                <div class="col col-lg-9">
+                    <div class="container" id="leftmenu">
+                        <?php
+                        $query="SELECT Nom_bonnet, Prix, Image_grande, Image_petite FROM bonnet;";
+                        $bonnets = $dbh->query($query) or die ("SQL Error in:<br> $query<br>Error message".$dbh->errorInfo()[2]);
+                        while ($bonnet = $bonnets->fetch())
+                        {
+                            extract ($bonnet);
+                            echo "<br><div class='container' id='product'><img src='' $Nom_bonnet</div>";
+                        }
+                        ?>
+                    </div>
+                </div>
+                <div class="col col-lg-3">
+                    <div class="container" id="rightmenu">
+                        <h2>Panier</h2>
+                        <div class="row">
+                            <div class="container" id="basket">
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <form>
+                                <input type="submit" value="Commander">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
