@@ -50,5 +50,4 @@ function connected()
         echo "<script>window.open('homepage.php','_self')</script>";
     }
 }
-
 ?>

@@ -1,7 +1,7 @@
 <?php
 require_once('fonctions.php');
 ConnectDB();
-connected();
+//connected();
 if(!empty($_POST['disconnect']))
 {
     echo "<script>window.open('homepage.php','_self')</script>";
@@ -23,7 +23,7 @@ if(!empty($_POST['disconnect']))
             <img class="logo" src="imgs/logo.png">
         </span>
         <form method="POST">
-            <input type="submit" class="buttonright" name="disconnect" value="Déconnecter" />
+            <input type="submit" id="buttonright" name="disconnect" value="Déconnecter" />
         </form>
     </body>
 </html>

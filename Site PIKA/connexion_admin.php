@@ -26,7 +26,7 @@ admin();
                                 <h3>Mot de passe</h3>
                                 <input id="password" name="password" size=75% type="password" placeholder="mdp" required /> 
                                 <br /><br />
-                                <input type="submit" class="buttonright" value="Connecter" id="submit"/> 
+                                <input type="submit" id="buttonright" value="Connecter"/>
                             </form>
                         </td>    
                     </tr>

@@ -49,12 +49,12 @@ ConnectDB();
                 <div class="col col-lg-9">
                     <div class="container" id="leftmenu">
                         <?php
-                        $query="SELECT Nom_bonnet, Prix, Image_grande, Image_petite FROM bonnet;";
+                        $query="SELECT Nom_bonnet, Prix, Image_grande, Image_petite, Description FROM bonnet;";
                         $bonnets = $dbh->query($query) or die ("SQL Error in:<br> $query<br>Error message".$dbh->errorInfo()[2]);
                         while ($bonnet = $bonnets->fetch())
                         {
-                            extract ($bonnet);
-                            echo "<br><div class='container' id='product'><img src='' $Nom_bonnet</div>";
+                            extract ($bonnet); // $Nom_bonnet, $Prix, $Image_grande, $Image_petite, $Description
+                            echo "<br><div class='container' id='product'><form method='post'><div class='form-group'><img src='imgs/$Image_grande.jpg' id='imgsize' title='$Nom_bonnet: $Description' class='mx-auto d-block'><h3 id='priceshowcase'>$Prix CHF</h3><input type='button' value='+' id='buttonright'></form></div></div>";
                         }
                         ?>
                     </div>
