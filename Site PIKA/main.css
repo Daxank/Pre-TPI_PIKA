@@ -1,64 +1,63 @@
-html, body 
-{
+html, body {
     height: 99%;
 }
-.containerlogo
-{
+
+.containerlogo {
 
 }
-.logo
-{
+
+.logo {
     width: 85px;
-    height: 65px;    
+    height: 65px;
 }
-.login
-{
+
+.login {
     width: 25%;
     height: 25%;
     margin: auto;
 }
-#tableContainer-1 
-{
+
+#tableContainer-1 {
     height: 100%;
     width: 100%;
     display: table;
 }
-#tableContainer-2 
-{
+
+#tableContainer-2 {
     vertical-align: middle;
     display: table-cell;
     height: 100%;
 }
-#myTable 
-{
+
+#myTable {
     margin: auto;
     border: 2px solid black;
-    background-color:#E6E6E6;
+    background-color: #E6E6E6;
     padding: 1%;
 }
-#buttonright
-{
+
+#buttonright {
     float: right;
 }
-#storetable 
-{
+
+#storetable {
     width: 99%;
     height: 90%;
     border: 2px solid black;
 }
-#leftmenu
-{
+
+#leftmenu {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
 }
-#rightmenu
-{
-    background-color:#E6E6E6;
+
+#rightmenu {
+    background-color: #E6E6E6;
     border: 2px solid black;
 }
-#basket
-{
+
+#basket {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
@@ -66,26 +65,22 @@ html, body
     white-space: nowrap;
     border: 2px solid black;
 }
-#buttonbig
-{
+
+#buttonbig {
     width: 40%;
     height: 30%;
 }
-#product
-{
+
+#product {
     background-color: cornflowerblue;
     border-radius: 25px;
     width: 250px;
     height: 250px;
     padding: 10px;
 }
-#imgsize
-{
+
+#imgsize {
     width: 200px;
     height: 200px;
     border-radius: 25px;
-}
-#priceshowcase
-{
-    float: left;
 }
