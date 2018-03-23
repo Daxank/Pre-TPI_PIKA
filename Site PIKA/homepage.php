@@ -12,7 +12,17 @@ ConnectDB();
     <meta name="PIKA" content="PIKA website">
     <link rel="shortcut icon" href="imgs/logo.png">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css.map">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script type="text/javascript">
         var adminclick = 0;
@@ -35,7 +45,7 @@ ConnectDB();
     </script>
 
 </head>
-<body>
+<body id="tablebody">
 <div class="container-fluid">
     <div class="row">
         <div class="col col-lg-9">
@@ -53,13 +63,13 @@ ConnectDB();
 
                 <ul class="dropdown-menu">
                     <?php
-                    $query = "SELECT Nom_couleur, Image_couleur FROM Couleur;";
+                    $query = "SELECT Nom_couleur, Image_couleur FROM couleur;";
                     $couleurs = $dbh->query($query) or die ("SQL Error in:<br> $query<br>Error message" . $dbh->errorInfo()[2]);
                     while ($couleur = $couleurs->fetch()) {
                         extract($couleur); // $Nom_couleur, $Image_couleur
                         echo "<li>
-                                <a href='#' title='$Nom_couleur'><img src='imgs/color/$Image_couleur.jpg'>$Nom_couleur</a>
-                            </li>";
+                                <img src='imgs/color/$Image_couleur.jpg' id='colorsize'>&nbsp; $Nom_couleur
+                              </li>";
                     }
                     ?>
                 </ul>
@@ -70,7 +80,7 @@ ConnectDB();
 <div class="container-border container-fluid" id="storetable">
     <div class="row">
         <div class="col col-lg-9">
-            <div class="container" id="leftmenu">
+            <div class="container-fluid" id="leftmenu">
                 <?php
                 $query = "SELECT Nom_bonnet, Prix, Image_grande, Image_petite, Description FROM bonnet;";
                 $bonnets = $dbh->query($query) or die ("SQL Error in:<br> $query<br>Error message" . $dbh->errorInfo()[2]);
@@ -88,14 +98,14 @@ ConnectDB();
             </div>
         </div>
         <div class="col col-lg-3">
-            <div class="container" id="rightmenu">
+            <div class="container-fluid" id="rightmenu">
                 <h2>Panier</h2>
-                <div class="row">
-                    <div class="container" id="basket">
+                <div class="row" id="rowsize">
+                    <div class="container-fluid" id="basket">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="container">
+                    <div class="container-fluid">
                         <form method="post">
                             <input class="float-right" type="submit" value="Commander">
                         </form>
