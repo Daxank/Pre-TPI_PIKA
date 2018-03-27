@@ -78,37 +78,50 @@ ConnectDB();
     </div>
 </div>
 <div class="container-border container-fluid" id="storetable">
-    <div class="row">
+    <div class="row" id="rowsize100">
         <div class="col col-lg-9">
             <div class="container-fluid" id="leftmenu">
-                <?php
-                $query = "SELECT Nom_bonnet, Prix, Image_grande, Image_petite, Description FROM bonnet;";
-                $bonnets = $dbh->query($query) or die ("SQL Error in:<br> $query<br>Error message" . $dbh->errorInfo()[2]);
-                while ($bonnet = $bonnets->fetch()) {
-                    extract($bonnet); // $Nom_bonnet, $Prix, $Image_grande, $Image_petite, $Description
-                    echo "<br><div class='container text-center' id='product'>
-                                                <form method='post'>
-                                                        <img src='imgs/$Image_grande.jpg' id='imgsize' title='$Nom_bonnet: $Description' class='mx-auto d-block'>
-                                                        <input type='submit' value='+' class='float-right'>
-                                                        <h3 class='float-right'>$Prix CHF</h3>
-                                                </form>
-                                            </div>";
-                }
-                ?>
+                <div class="row">
+                    <?php
+                    $query = "SELECT Nom_bonnet, Prix, Image_grande, Image_petite, Description FROM bonnet;";
+                    $bonnets = $dbh->query($query) or die ("SQL Error in:<br> $query<br>Error message" . $dbh->errorInfo()[2]);
+                    while ($bonnet = $bonnets->fetch()) {
+                        extract($bonnet); // $Nom_bonnet, $Prix, $Image_grande, $Image_petite, $Description
+                        echo "<div class='col col-lg-3'>
+                                    <div class='container text-center' id='product'>
+                                        <form method='post'>
+                                            <img src='imgs/$Image_grande.jpg' id='imgsize' title='$Nom_bonnet: $Description' class='mx-auto d-block'>
+                                            <input type='submit' value='+' class='float-right'>
+                                            <h3 class='float-right'>$Prix CHF</h3>
+                                        </form>
+                                    </div>
+                                </div>";
+                    }
+                    ?>
+                </div>
             </div>
         </div>
         <div class="col col-lg-3">
             <div class="container-fluid" id="rightmenu">
-                <h2>Panier</h2>
-                <div class="row" id="rowsize">
-                    <div class="container-fluid" id="basket">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="container-fluid">
-                        <form method="post">
-                            <input class="float-right" type="submit" value="Commander">
-                        </form>
+                <div class="row" id="rowsize100">
+                    <div class="col-lg-12">
+                        <h2>Panier</h2>
+                        <div class="row" id="rowsize70">
+                            <div class="col-lg-12">
+                                <div class="container-fluid" id="basket">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="rowsize20">
+                            <div class="col-lg-12">
+                                <div class="container-fluid">
+                                    <form method="post">
+                                        <input class="float-right" type="submit" value="Commander">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

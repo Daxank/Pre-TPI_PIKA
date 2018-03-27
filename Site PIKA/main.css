@@ -54,7 +54,7 @@ html, body {
 #rightmenu {
     background-color: #E6E6E6;
     border: 2px solid black;
-    height: 90%;
+    height: 100%;
 }
 
 #basket {
@@ -85,18 +85,24 @@ html, body {
     border-radius: 25px;
 }
 
-#colorsize
-{
-    height: 40%;
-    width: 40%;
+#colorsize {
+    height: 100px;
+    width: 100px;
 }
 
-#rowsize
-{
-    height: 80%;
+#rowsize70 {
+    height: 70%;
 }
-#tablebody
-{
+
+#rowsize20 {
+    height: 20%;
+}
+
+#rowsize100 {
+    height: 100%;
+}
+
+#tablebody {
     display: table;
     width: 99%;
     height: 90%;
