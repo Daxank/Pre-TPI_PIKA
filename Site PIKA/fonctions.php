@@ -33,14 +33,4 @@ function admin()
     }
 }
 
-function connected()
-{
-    if ($username == 'admin' && $password == 'password') {
-    } else {
-        $username = null;
-        $password = null;
-        echo "<script>window.open('homepage.php','_self')</script>";
-    }
-}
-
 ?>
