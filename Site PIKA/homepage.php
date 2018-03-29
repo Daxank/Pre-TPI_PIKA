@@ -106,7 +106,6 @@ ConnectDB();
                         <div class="row" id="rowsize70">
                             <div class="col-lg-12">
                                 <div class="container-fluid" id="basket">
-
                                 </div>
                             </div>
                         </div>
